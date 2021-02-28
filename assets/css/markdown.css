@@ -1,0 +1,58 @@
+.markdown > h2 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+
+
+code {
+	color: rgb(230, 191, 84);
+	font-family: monospace;
+}
+
+summary {
+	outline: none;
+}
+
+details[open] summary ~ * {
+	animation: sweep .5s ease-in-out;
+  }
+  
+  @keyframes sweep {
+	0%    {opacity: 0; margin-left: -10px}
+	100%  {opacity: 1; margin-left: 0px}
+  }
+
+details > h3 {
+	margin-top: 25px;
+	margin-bottom: 5px;
+	font-size: 1.2rem;
+	color: rgb(255, 56, 56);
+	font-weight: 700;
+
+}
+
+.language-console {
+	font-size: 13px;
+}
+
+details > h5 {
+	margin-top: 20px;
+	margin-bottom: 2px;
+	font-size: 0.9rem;
+	color: white;
+	font-weight: 650;
+	font-style: italic;
+
+}
+
+.markdown > details > ol > li {
+	margin-left: 40px;
+}
+
+.markdown > details > ol > li > ul {
+	margin-left: 40px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
