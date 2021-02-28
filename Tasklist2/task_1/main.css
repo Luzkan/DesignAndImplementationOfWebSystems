@@ -1,0 +1,119 @@
+
+    
+body {
+    /* This is the main background color */
+    background-color: #d3d3d3;
+
+    /* And there's probably no margin */
+    margin: 0px;
+}
+
+li {
+    /* Creating the square with yellow background */
+    background-color: #ffff00;
+
+    /* Small border, it's thicker when two squares are neighbours  */
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+
+    /* Sizing is a wild guess, but looks similiar to me */
+    width: 70px;
+    line-height:70px;
+}
+
+ul {
+    /* Obviously text is centered, and a bit larger */
+    text-align: center;
+    font-size: 1.8em;
+    
+    /* Removing the list style padding, and bullets */
+    padding: 10px;
+    list-style-type: none;
+
+    /* No margin (still guessing) */
+    margin: 0px;
+
+    /* Compensate for the float/clear manipulation */
+    overflow: auto;
+}
+
+p {
+    /* Background color in the p element */
+    background-color: #add8e6;
+
+    /* Getting it closer to the list above */
+    margin-top: 0px;
+
+    /* It seems to have a tiny bit of padding */
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ul:after {
+    /* These values were given in the task */
+    display: block;
+    height: 0;
+    content: ’’;
+    clear: both;
+}
+
+/* The tip tells to use nth type, but I see no pattern
+    in the numbers (which to which side), so I'll just
+    hardcode for now, but I'm curious if a patterns
+    does in fact exist, though :) */
+
+li:nth-of-type(1) {
+    float: left;
+}
+
+li:nth-of-type(2) {
+    float: left;
+}
+
+li:nth-of-type(3) {
+    float: left;
+}
+
+li:nth-of-type(4) {
+    float: right;
+}
+
+li:nth-of-type(5) {
+    float: right;
+}
+
+li:nth-of-type(6) {
+    float: right;
+}
+
+li:nth-of-type(7) {
+    float: left;
+    clear: both;
+}
+
+li:nth-of-type(8) {
+    float: right;
+}
+
+li:nth-of-type(9) {
+    float: right;
+}
+
+li:nth-of-type(10) {
+    float: left;
+}
+
+li:nth-of-type(11) {
+    float: left;
+    clear: both;
+}
+
+li:nth-of-type(12) {
+    float: right;
+}
+
+li:nth-of-type(12)::after {
+    float: none;
+}

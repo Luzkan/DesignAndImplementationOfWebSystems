@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/code.css">
+        <!--In case anyone is wondering why this doesn't launch locally:
+            You need to launch http server instance or otherwise CORS policy
+            will not allow you to use .js as modules.
+             
+            One solution would be to use: type="text/javascript" and move
+            the code to one file. But preferrably start the server:
+            - `python3 -m http.server`, `node server`
+            depending what you've got installed on the computer.-->
+        <script type="module" src="./js/main.js"></script>
+        <title>TL #2 - Task #2</title>
+    </head>
+    <body>
+        <div class="main">
+            <h3>Factory Method</h3>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+            <pre>
+            <code class="language-javascript">
+// (a) Account Factory + (d) Initializing Fields + (b) Additional Fields
+export const Account = (account_number, date_created, currency) => {
+
+    // (d) All fields below and above are not exposed publicly
+    let balance = 0;
+
+    const debit = (amount) => {
+        if (amount < 0) { throw new Error(`Illegal amount.`); }
+        if (balance < amount) { throw new Error(`Insufficient account balance.`); }
+
+        balance -= amount;
+        return balance;
+    };
+
+    const credit = (amount) => {
+        if (amount < 0) { throw new Error(`Illegal amount.`); }
+
+        balance += amount;
+        return balance;
+    }
+
+    // (e) Logging all fields and returning them as an object.
+    const info = () => {
+        console.log(`Account [${account_number}]: ${balance}${currency} (${date_created})`)
+        return { account_number, date_created, currency, balance };
+    }
+
+    // (c) Fields from "b" and "balance" are out of scope
+    return { debit, credit, info };
+};
+export default Account;
+</code> </pre>
+            <label>
+                Args:
+                <input id="arguments_input" placeholder="<acc_num>, <date>, <currency>" value="1, 28-02-2021, EUR">
+                <button id="create">Create</button>
+            </label>
+            <p id="info"></p>
+            <nav>
+                <div id="controls"></div>
+            </nav>
+        </div>
+    </body>
+</html>

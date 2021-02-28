@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 755px;
+    display: flex;
+    flex-flow: column;
+}
+
+.main > p {
+    text-align: center;
+}
+
+#info {
+    height: 1rem;
+}
+
+.main > h3 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+button:active {
+    background-color: #b12525;
+}
+
+input {
+    width: 225px;
+}
+
+label {
+    margin-top: 7px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 7px;
+    text-align: center;
+}
+
+.control > input {
+    width: 80px;
+}

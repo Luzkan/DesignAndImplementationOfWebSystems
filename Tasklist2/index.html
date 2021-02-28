@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>D&IOWS</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/markdown.css" />
+	<script src="../assets/js/markdown.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<span class="avatar"><img src="../assets/img/avatar.png" alt="" /></span>
+			<h1><strong><a href="../index.html">Design & Implementation of Web Systems</a></strong><br />
+				<p>Task List #2</p>
+			</h1>
+		</header>
+		<section id="main">
+			<section class="thumbnails">
+				<div>
+					<a href="./task_1/index.html">
+						<img src="./img/task1_comparison.png" alt="" />
+						<h3>Task #1</h3>
+						<h5>Styling HTML document with CSS to match design.</h5>
+					</a>
+				</div>
+				<div>
+					<a href="./task_2/index.html">
+						<img src="./img/task2_preview.png" alt="" />
+						<h3>Task #2</h3>
+						<h5>JavaScript summing function. (classic)</h5>
+					</a>
+				</div>
+				<div>
+					<a href="./task_3/index.html">
+						<img src="./img/task3_preview.png" alt="" />
+						<h3>Task #3</h3>
+						<h5>JavaScript summing function. (functional) </h5>
+						<h6>Without any conditions, loops or variable declaration.</h6>
+					</a>
+				</div>
+				<div>
+					<a href="./task_4/index.html">
+						<img src="./img/task4_preview.png" alt="" />
+						<h3>Task #4</h3>
+						<h5>Changing code: Factory Method pattern in JavaScript.</h5>
+					</a>
+				</div>
+			</section>
+		</section>
+
+		<div class="collapse" id="collapseExample">
+			<details class="markdown">
+				<summary>Expand <a href="./README.md">README.md</a> with Answers and Descriptions.</summary>
+				<div id="markdown" class="markdown">
+
+					<script>
+						Promise.all([
+							fetch('./README.md').then(x => x.text())
+						]).then(([readme_content]) => {
+							document.getElementById('markdown').innerHTML = marked(readme_content);
+						});
+					</script>
+				</div>
+			</details>
+		</div>
+		
+		<footer id="footer">
+			<p>&copy; Marcel Jerzyk 2021.</p>
+		</footer>
+	</div>
+</body>
+
+</html>
