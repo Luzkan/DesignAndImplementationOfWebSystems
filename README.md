@@ -3,8 +3,8 @@
   <p align="center">
     <a href="./README.md"><strong>README.md</strong></a>
     ·
-    <a href="./index.html">Website</a>
+    <a href="https://luzkan.github.io/DesignAndImplementationOfWebSystems/index.html">Website</a>
   </p>
 </p>
 
-Content for main `README.md` soon.
+Content for main `README.md` planned to be: soon.

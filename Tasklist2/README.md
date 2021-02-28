@@ -6,7 +6,7 @@
     ·
     <a href="./Tasklist2.pdf">Tasklist2.pdf</a>
     ·
-    <a href="./index.html">Website</a>
+    <a href="https://luzkan.github.io/DesignAndImplementationOfWebSystems/Tasklist2/index.html">Website</a>
   </p>
 </p>
 
